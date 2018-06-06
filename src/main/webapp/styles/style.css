@@ -1,0 +1,27 @@
+body{
+  text-align: left;
+  font-family:arial;
+  line-height: 18px;
+  font-size: 26px;
+  margin-left: 50px;
+  background-color: #B2B09B;
+}
+.form-group label{
+	color:#254441;
+}
+.form-group input{
+  width: 400px;
+  margin-bottom: 25px;
+  margin-top: 25px;
+  height: 26px;
+  
+}
+button{
+  width: 400px;
+  margin-bottom: 25px;
+  margin-top: 25px;
+  height: 36px;
+  font-size: 26px;
+  text-align: center;
+  background-color: #43AA8B;
+}
