@@ -21,6 +21,8 @@ public class BookTest {
 	}
 	@Test
 	public void booksIdTest() {
-		assertNull(book.getId());
+		String id = "1a3";
+		book.setId(id);
+		assertEquals(id, book.getId());
 	}
 }
