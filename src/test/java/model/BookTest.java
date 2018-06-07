@@ -31,6 +31,7 @@ public class BookTest {
 	public void booksNumberPagesTest() {
 		Integer numberOfPages = 130;
 		book.setNumberPages(numberOfPages);
-		assertNull(book.getNumberPages());
+		assertEquals(numberOfPages, book.getNumberPages());
 	}
+	
 }
