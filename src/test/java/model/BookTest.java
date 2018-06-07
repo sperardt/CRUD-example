@@ -15,8 +15,8 @@ public class BookTest {
 
 	@Test
 	public void booksNameTest() {
-		assertNull(book.getName());
-		
-		
+		String name = "Harry Potter";
+		book.setName(name);
+		assertEquals(name, book.getName());
 	}
 }
