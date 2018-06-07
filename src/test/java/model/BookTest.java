@@ -19,4 +19,8 @@ public class BookTest {
 		book.setName(name);
 		assertEquals(name, book.getName());
 	}
+	@Test
+	public void booksIdTest() {
+		assertNull(book.getId());
+	}
 }
