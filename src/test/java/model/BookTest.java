@@ -26,8 +26,11 @@ public class BookTest {
 		book.setId(id);
 		assertEquals(id, book.getId());
 	}
+	
 	@Test
 	public void booksNumberPagesTest() {
+		Integer numberOfPages = 130;
+		book.setNumberPages(numberOfPages);
 		assertNull(book.getNumberPages());
 	}
 }
