@@ -19,10 +19,15 @@ public class BookTest {
 		book.setName(name);
 		assertEquals(name, book.getName());
 	}
+	
 	@Test
 	public void booksIdTest() {
 		String id = "1a3";
 		book.setId(id);
 		assertEquals(id, book.getId());
+	}
+	@Test
+	public void booksNumberPagesTest() {
+		assertNull(book.getPageNumber())
 	}
 }
