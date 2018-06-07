@@ -14,7 +14,8 @@ public class BookTest {
 
 	@Test
 	public void booksNameTest() {
-		String name = "Harry Potter";
-		Assert.assertEquals(name, book.getName());
+		assertNull(book.getName());
+		
+		
 	}
 }
