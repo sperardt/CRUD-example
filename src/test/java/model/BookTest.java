@@ -36,6 +36,8 @@ public class BookTest {
 
 	@Test
 	public void booksPriceTest() {
-		assertNull(book.getPrice());
+		Double price = 13.60;
+		book.setPrice(price);
+		assertEquals(price, book.getPrice());
 	}
 }

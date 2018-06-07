@@ -5,6 +5,7 @@ public class Book {
 	private String name;
 	private String id;
 	private Integer numberPages;
+	private Double price;
 	
 	public String getName() {
 		return name;
@@ -28,5 +29,13 @@ public class Book {
 
 	public void setNumberPages(Integer numberPages) {
 		this.numberPages = numberPages;
+	}
+
+	public Double getPrice() {
+		return price;
+	}
+
+	public void setPrice(Double price) {
+		this.price = price;
 	}
 }
