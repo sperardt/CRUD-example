@@ -33,5 +33,9 @@ public class BookTest {
 		book.setNumberPages(numberOfPages);
 		assertEquals(numberOfPages, book.getNumberPages());
 	}
-	
+
+	@Test
+	public void booksPriceTest() {
+		assertNull(book.getPrice());
+	}
 }
