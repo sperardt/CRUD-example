@@ -4,7 +4,8 @@ public class Book {
 
 	private String name;
 	private String id;
-
+	private Integer numberPages;
+	
 	public String getName() {
 		return name;
 	}
@@ -19,5 +20,13 @@ public class Book {
 
 	public void setId(String id) {
 		this.id = id;
+	}
+
+	public Integer getNumberPages() {
+		return numberPages;
+	}
+
+	public void setNumberPages(Integer numberPages) {
+		this.numberPages = numberPages;
 	}
 }

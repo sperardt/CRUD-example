@@ -28,6 +28,6 @@ public class BookTest {
 	}
 	@Test
 	public void booksNumberPagesTest() {
-		assertNull(book.getPageNumber())
+		assertNull(book.getNumberPages());
 	}
 }
