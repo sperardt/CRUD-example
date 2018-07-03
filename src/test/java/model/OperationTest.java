@@ -23,7 +23,7 @@ public class OperationTest {
 		book.setNumberPages(500);
 		book.setPrice(10.00);
 		
-		bookList.put(book.getId(), book);
+		//bookList.put(book.getId(), book);
 	}
 	
 	@Test
@@ -32,7 +32,7 @@ public class OperationTest {
 		assertFalse(bookList.isEmpty());
 		assertEquals("Harry Potter", bookList.get("1").getName());
 		
-		Operation.setBookList(bookList);	
+		Operation.setBookList(book.getId(), book);	
 		assertEquals("Harry Potter",  Operation.getBookList().get("1").getName());
 		
 		
