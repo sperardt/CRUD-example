@@ -1,16 +1,16 @@
 package model;
 
-import java.util.ArrayList;
+import java.util.Map;
 
 public class Operation {
-	private static ArrayList<Book> BookList;
+	private static Map<String, Book> bookList;
 
-	public static ArrayList<Book> getBookList() {
-		return BookList;
+	public static Map<String, Book>  getBookList() {
+		return bookList;
 	}
 
-	public static void setBookList(ArrayList<Book> bookList) {
-		BookList = bookList;
+	public static void setBookList(Map<String, Book>  bookList) {
+		Operation.bookList = bookList;
 	}
 
 	
