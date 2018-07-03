@@ -22,30 +22,16 @@ public class OperationTest {
 		book.setName("Harry Potter");
 		book.setNumberPages(500);
 		book.setPrice(10.00);
-		
-		//bookList.put(book.getId(), book);
+
 	}
 	
 	@Test
 	public void addBooksTest() {
-		//assertNull(Operation.getBookList());
-		assertFalse(bookList.isEmpty());
-		assertEquals("Harry Potter", bookList.get("1").getName());
+		assertNull(Operation.getBookList());
 		
 		Operation.setBookList(book.getId(), book);	
+		assertFalse(Operation.getBookList().isEmpty());
 		assertEquals("Harry Potter",  Operation.getBookList().get("1").getName());
-		
-		
-//		
-//		book.setId("2");
-//		book.setName("Hunger games");
-//		book.setNumberPages(300);
-//		book.setPrice(15.00);
-//		
-//		bookList.add(book);
-//		Operation.setBookList(bookList);	
-//		
-//		assertEquals(2, Operation.getBookList().size());
 	}
 	
 }

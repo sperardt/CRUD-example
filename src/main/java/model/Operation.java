@@ -1,5 +1,6 @@
 package model;
 
+import java.util.HashMap;
 import java.util.Map;
 
 public class Operation {
@@ -9,8 +10,10 @@ public class Operation {
 		return bookList;
 	}
 
-	public static void setBookList(Map<String, Book>  bookList) {
-		Operation.bookList = bookList;
+	public static void setBookList(String id, Book book) {
+		Map<String, Book> bookMap = new HashMap<String, Book>();
+		bookMap.put(id, book);
+		Operation.bookList = bookMap;
 	}
 
 	
