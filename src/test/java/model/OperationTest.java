@@ -9,15 +9,17 @@ import java.util.Map;
 import org.junit.Before;
 import org.junit.Test;
 
+import com.java.crud.dao.OperationDAOImpl;
+
 public class OperationTest {
 	Book book;
-	Operation op;
+	OperationDAOImpl op;
 	HashMap<String, Book> bookMap;
 	
 	@Before
 	public void setUp() {
 		book = new Book();
-		op = new Operation();
+		op = new OperationDAOImpl();
 		bookMap = new HashMap<String, Book>();
 		
 		book.setId("1");
@@ -80,7 +82,7 @@ public class OperationTest {
 		book.setId("2");
 		book.setName("Hunger Games");
 			
-		op.setBookList(book.getId(), book);
+		op.addBook(book.getId(), book);
 	
 		assertEquals(2, op.getBookList().size());
 		

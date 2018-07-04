@@ -1,15 +1,17 @@
-package model;
+package com.java.crud.dao;
 
 import java.util.HashMap;
 
-public class Operation {
+import model.Book;
+
+public class OperationDAOImpl implements OperationDAO{
 	private HashMap<String, Book> bookList = new HashMap<String, Book>();
 
 	public HashMap<String, Book>  getBookList() {
 		return bookList;
 	}
 
-	public void setBookList(String id, Book book) {
+	public void addBook(String id, Book book) {
 		if (this.bookList.containsKey(id)) 
 			this.bookList.replace(id, book);
 		else this.bookList.put(id, book);
