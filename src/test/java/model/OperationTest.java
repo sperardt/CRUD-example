@@ -43,17 +43,48 @@ public class OperationTest {
 		assertFalse(op.getBookList().isEmpty());
 		assertEquals("Harry Potter",  op.getBookList().get("1").getName());
 		
-		book = new Book();
 		book.setId("1");
-		book.setName("Harry Potter");
+		book.setName("NICK Potter");
 		
 		
 		assertEquals("1", book.getId());
 		op.setBookList(book.getId(), book);
 		assertTrue(op.getBookList().containsKey("1"));
 			
-		assertEquals("Harry Potter",  op.getBookList().get("1").getName());
+		assertEquals("NICK Potter",  op.getBookList().get("1").getName());
 		assertEquals(new Double(10.00),  op.getBookList().get("1").getPrice());
 	
+	}
+	
+	@Test
+	public void addAnotherBookTest() {
+		op.setBookList(book.getId(), book);	
+		assertEquals(1, op.getBookList().size());
+		
+		book = new Book();		
+		book.setId("2");
+		book.setName("Hunger Games");
+			
+		op.setBookList(book.getId(), book);
+	
+		assertEquals(2, op.getBookList().size());
+	}
+	
+
+	@Test
+	public void removeABookTest() {
+		op.setBookList(book.getId(), book);	
+		assertEquals(1, op.getBookList().size());
+		
+		book = new Book();		
+		book.setId("2");
+		book.setName("Hunger Games");
+			
+		op.setBookList(book.getId(), book);
+	
+		assertEquals(2, op.getBookList().size());
+		
+		op.removeBook("1");
+		assertEquals(1, op.getBookList().size());
 	}
 }
