@@ -10,13 +10,13 @@ import org.junit.Before;
 import org.junit.Test;
 
 public class OperationTest {
-	Map<String, Book> bookList;
 	Book book;
-
+	Operation op;
+	
 	@Before
 	public void setUp() {
-		bookList = new HashMap<String, Book>();
 		book = new Book();
+		op = new Operation();
 		
 		book.setId("1");
 		book.setName("Harry Potter");
@@ -27,11 +27,28 @@ public class OperationTest {
 	
 	@Test
 	public void addBooksTest() {
-		assertNull(Operation.getBookList());
+		//assertNull(Operation.getBookList());
 		
-		Operation.setBookList(book.getId(), book);	
-		assertFalse(Operation.getBookList().isEmpty());
-		assertEquals("Harry Potter",  Operation.getBookList().get("1").getName());
+		op.setBookList(book.getId(), book);	
+		assertFalse(op.getBookList().isEmpty());
+		assertEquals("Harry Potter",  op.getBookList().get("1").getName());
 	}
 	
+	@Test
+	public void addSameBookTest() {
+		
+		op.setBookList(book.getId(), book);	
+		assertFalse(op.getBookList().isEmpty());
+		assertEquals("Harry Potter",  op.getBookList().get("1").getName());
+		
+		book.setId("1");
+		book.setName("Harry Potter");
+		book.setNumberPages(500);
+		book.setPrice(50.00);
+		
+		op.setBookList(book.getId(), book);	
+		assertEquals(new Double(50.00),  op.getBookList().get("2").getPrice());
+
+	
+	}
 }
