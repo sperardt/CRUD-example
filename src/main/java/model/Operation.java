@@ -1,7 +1,6 @@
 package model;
 
 import java.util.HashMap;
-import java.util.Map;
 
 public class Operation {
 	private HashMap<String, Book> bookList = new HashMap<String, Book>();
@@ -11,10 +10,14 @@ public class Operation {
 	}
 
 	public void setBookList(String id, Book book) {
-		//HashMap<String, Book> bookMap = new HashMap<String, Book>();
-		//bookMap.put(id, book);
-		this.bookList.put(id, book);
+		if (this.bookList.containsKey(id)) 
+			this.bookList.replace(id, book);
+		else this.bookList.put(id, book);
 	}
-
+	
+	public void removeBook(String id) {
+		if (this.bookList.containsKey(id)) 
+			this.bookList.remove(id);
+	}
 	
 }
