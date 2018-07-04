@@ -4,16 +4,16 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class Operation {
-	private static Map<String, Book> bookList;
+	private HashMap<String, Book> bookList = new HashMap<String, Book>();
 
-	public static Map<String, Book>  getBookList() {
+	public HashMap<String, Book>  getBookList() {
 		return bookList;
 	}
 
-	public static void setBookList(String id, Book book) {
-		Map<String, Book> bookMap = new HashMap<String, Book>();
-		bookMap.put(id, book);
-		Operation.bookList = bookMap;
+	public void setBookList(String id, Book book) {
+		//HashMap<String, Book> bookMap = new HashMap<String, Book>();
+		//bookMap.put(id, book);
+		this.bookList.put(id, book);
 	}
 
 	
