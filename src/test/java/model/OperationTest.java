@@ -31,7 +31,7 @@ public class OperationTest {
 	public void addBooksTest() {
 		assertTrue(op.getBookList().isEmpty());
 		
-		op.setBookList(book.getId(), book);	
+		op.addBookList(book.getId(), book);	
 		assertFalse(op.getBookList().isEmpty());
 		assertEquals("Harry Potter",  op.getBookList().get("1").getName());
 	}
@@ -39,7 +39,7 @@ public class OperationTest {
 	@Test
 	public void UpdateSameBookTest() {
 		
-		op.setBookList(book.getId(), book);	
+		op.addBookList(book.getId(), book);	
 		assertFalse(op.getBookList().isEmpty());
 		assertEquals("Harry Potter",  op.getBookList().get("1").getName());
 		
@@ -48,7 +48,7 @@ public class OperationTest {
 		
 		
 		assertEquals("1", book.getId());
-		op.setBookList(book.getId(), book);
+		op.addBookList(book.getId(), book);
 		assertTrue(op.getBookList().containsKey("1"));
 			
 		assertEquals("NICK Potter",  op.getBookList().get("1").getName());
@@ -58,14 +58,14 @@ public class OperationTest {
 	
 	@Test
 	public void addAnotherBookTest() {
-		op.setBookList(book.getId(), book);	
+		op.addBookList(book.getId(), book);	
 		assertEquals(1, op.getBookList().size());
 		
 		book = new Book();		
 		book.setId("2");
 		book.setName("Hunger Games");
 			
-		op.setBookList(book.getId(), book);
+		op.addBookList(book.getId(), book);
 	
 		assertEquals(2, op.getBookList().size());
 	}
@@ -73,7 +73,7 @@ public class OperationTest {
 
 	@Test
 	public void removeABookTest() {
-		op.setBookList(book.getId(), book);	
+		op.addBookList(book.getId(), book);	
 		assertEquals(1, op.getBookList().size());
 		
 		book = new Book();		
